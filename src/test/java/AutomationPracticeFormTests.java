@@ -65,6 +65,8 @@ public class AutomationPracticeFormTests {
 
         $("#submit").click();
         $(".modal-dialog").should(appear);
+
+        //checking
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(
                 text("Tester"),
