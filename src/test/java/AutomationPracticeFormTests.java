@@ -20,6 +20,8 @@ public class AutomationPracticeFormTests {
     @Test
     void fillFormTest () {
         open("/automation-practice-form");
+        executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
 
         //Name <input type="text">
         $("#firstName").setValue("Tester");
