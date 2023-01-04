@@ -51,7 +51,7 @@ public class AutomationPracticeFormTests {
 
         //Picture
         //  $ ("#uploadPicture").click();
-        $("#uploadPicture").uploadFile(new File("img/1.jpeg"));
+        $("#uploadPicture").uploadFile(new File("src/test/resources/1.jpeg"));
 
         //Current Address
         $("#currentAddress").setValue("test address1");
