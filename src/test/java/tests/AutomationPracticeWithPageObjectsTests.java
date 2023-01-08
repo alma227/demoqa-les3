@@ -7,7 +7,7 @@ public class AutomationPracticeWithPageObjectsTests extends TestBase {
     @Test
     void successfulRegistrationTest () {
         String firstName = "Tester";
-        String lastName = "Testerov";
+        String lastName = "Testerova";
         String email = "test@test.kz";
         String gender = "Female";
         String phone = "2456465465";
@@ -16,7 +16,7 @@ public class AutomationPracticeWithPageObjectsTests extends TestBase {
         String year = "1999";
         String subject = "Arts";
         String hobby = "Music";
-        String picture = "src/test/resources/1.jpeg";
+        String picture = "1.jpeg";
         String address = "test address1";
         String state = "NCR";
         String city = "Delhi";
@@ -30,7 +30,7 @@ public class AutomationPracticeWithPageObjectsTests extends TestBase {
                 .setBirthDate(day, month, year)
                 .setSubject(subject)
                 .setHobbie(hobby)
-                .setPicture(picture)
+                .setPicture("src/test/resources/" + picture)
                 .setAddress(address)
                 .setState(state)
                 .setCity(city)
@@ -43,10 +43,10 @@ public class AutomationPracticeWithPageObjectsTests extends TestBase {
                 .verifyResult("Student Email", email)
                 .verifyResult("Gender", gender)
                 .verifyResult("Mobile", phone)
-                .verifyResult("Date of Birth", "11 November,1999")
+                .verifyResult("Date of Birth", day + " " + month + "," + year)
                 .verifyResult("Subjects", subject)
                 .verifyResult("Hobbies", hobby)
-                .verifyResult("Picture", "1.jpeg")
+                .verifyResult("Picture", picture)
                 .verifyResult("Address", address)
                 .verifyResult("State and City", state + " " + city);
 
@@ -59,7 +59,7 @@ public class AutomationPracticeWithPageObjectsTests extends TestBase {
         registrationPage.openPage();
 
         registrationPage.setFirstName("Tester");
-        registrationPage.setLastName("Testerov");
+        registrationPage.setLastName("Testerova");
         registrationPage.setEmail("test@test.kz");
         registrationPage.setGender("Female");
         registrationPage.setPhone("2456465465");
